@@ -1,11 +1,11 @@
 {
-  "name": "tree",
+  "name": "tree_shell",
   "version": "1.0.0",
   "description": "treeTool",
   "scripts": {},
   "main": "./bin/cli.js",
   "keywords": [
-    "tree"
+    "tree_shell"
   ],
   "bin": {
     "tree": "bin/cli.js"
