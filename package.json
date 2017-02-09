@@ -1,0 +1,20 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "treeTool",
+  "scripts": {},
+  "main": "./bin/cli.js",
+  "keywords": [
+    "tree"
+  ],
+  "bin": {
+    "tree": "bin/cli.js"
+  },
+  "author": "qiongxueCui",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "shelljs": "^0.7.5"
+  }
+}
