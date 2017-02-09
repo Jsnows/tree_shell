@@ -25,16 +25,8 @@ $ tree
 
 $ tree 
 
-类似如下显示
+跟find -f 加文件名可以找出该文件并且显示路径
 
-|--dir
-
-|  |--a.txt
-
-|--dir2
-
-|  |--dir3
-
-|  |  |--b.txt
+$ tree find -f dirName
 
 
