@@ -19,6 +19,8 @@ $ cd 进入tree_shell所在目录
 ```
 执行下面命令(建立一个软链接,也可以写进Path里)
 ```
+$ npm install
+
 $ npm link
 
 $ tree
