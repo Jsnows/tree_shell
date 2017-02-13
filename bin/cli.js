@@ -26,5 +26,5 @@ program.parse(process.argv);
  * 当用户没有输入的时候执行
  */
 if (!program.args.length){
-	util.con()
+	util.exec()
 }
