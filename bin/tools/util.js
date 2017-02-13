@@ -4,12 +4,18 @@ const shelljs = require('shelljs/global')
 const fs = require('fs')
 const chalk = require('chalk')
 
-exports.con = (dName) => {
+exports.con = (dName,nLevel) => {
 	var a = "|  "
 	var b = "|--"
 	var checkNum = 1
 	var bg = false 		//知否显示红色
-	//将文件名打印出来num：文件的层数 dirName：文件的名称
+
+	if(nLevel <= 0 ){
+		console.log(chalk.red("erroe: level must more then 0"))
+		return 
+	}
+
+	//将文件名打印出来 num：文件的层数 dirName：文件的名称
 	function consoleName(num,dirName){
 		//true就是文件夹 false就是文件
 		let str = ''
@@ -21,6 +27,7 @@ exports.con = (dName) => {
 			str += b
 		}
 		if(dirName == dName){
+			if(dName == 0) return
 			let dirAddress = ' '+JSON.stringify(pwd())
 			console.log(chalk.yellow(str+dName+dirAddress))
 		}
@@ -41,12 +48,14 @@ exports.con = (dName) => {
 		ls().forEach(function(file){
 			var statInfo = fs.statSync(file)
 			if(!statInfo.isFile()){
-				consoleName(checkNum,file,bg)
-				cd(file)
-				checkNum += 1
-				loop()
+				consoleName(checkNum,file)
+				if(checkNum != nLevel){
+					cd(file)	
+					checkNum += 1
+					loop()
+				}
 			}else{
-				consoleName(checkNum,file,bg)	
+				consoleName(checkNum,file)	
 			}
 		})
 		cd('..')

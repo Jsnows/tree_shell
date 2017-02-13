@@ -1,6 +1,6 @@
 {
   "name": "tree_shell",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "treeTool",
   "scripts": {},
   "main": "./bin/cli.js",
