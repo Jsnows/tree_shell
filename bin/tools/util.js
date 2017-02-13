@@ -11,7 +11,7 @@ exports.con = (dName,nLevel) => {
 	var bg = false 		//知否显示红色
 
 	if(nLevel <= 0 ){
-		console.log(chalk.red("erroe: level must more then 0"))
+		console.log(chalk.red("error: level must more then 0"))
 		return 
 	}
 
